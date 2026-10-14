@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "speedtestpy"
+version = "1.1.0"
+description = "Speed test akurat & cepat (ala Ookla & Cloudflare), murni stdlib"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "kasep" }]
+
+[project.scripts]
+speedtestpy = "speedtestpy.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["speedtestpy*"]
